@@ -7,6 +7,7 @@
  <InputText @bind-Value="@AddBug.Description" placeholder="Enter Description" />  <ValidationMessage For="@(() => @AddBug.Description)"></ValidationMessage>
  <InputNumber @bind-Value="@AddBug.Priority" placeholder="Enter Priority" /> <ValidationMessage For="@(() => AddBug.Priority)"></ValidationMessage>
  <button type="submit">Add Bug</button>
+ <ValidationSummary></ValidationSummary>
 </EditForm>
 @code {
 public Bug AddBug { get; set; } = new Bug();
